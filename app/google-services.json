@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "807111486874",
+    "firebase_url": "https://goco-pro.firebaseio.com",
+    "project_id": "goco-pro",
+    "storage_bucket": "goco-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807111486874:android:d10eb012e7956b1980de23",
+        "android_client_info": {
+          "package_name": "com.zash.goco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807111486874-u6r4apah4lpcrt07vfu4sq2e0do3cbdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABgEOa0mu3pxTBBSBge_ULcuIdz-hOU4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807111486874-u6r4apah4lpcrt07vfu4sq2e0do3cbdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
