@@ -79,7 +79,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        Toast.makeText(this,"Login in progress", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"Login in progress", Toast.LENGTH_SHORT).show();
+        final LoadingDialog loadingDialog= new LoadingDialog(this);
+        loadingDialog.startLoading();
 
 
         // TODO: Use FirebaseAuth to sign in with email & password
@@ -91,13 +93,14 @@ public class LoginActivity extends AppCompatActivity {
                 if(!task.isSuccessful()){
                     Log.d("FlashChat","problem sighn in : "+task.getException());
                     showErrorDialog("Login Failed");
+                    loadingDialog.endLoading();
 
                 }else{
                     Intent intent = new Intent(LoginActivity.this,MainChatActivity.class);
 
 
                     finish();
-
+                    loadingDialog.endLoading();
 
                     startActivity(intent);
 
