@@ -13,10 +13,11 @@ public class LoadingDialog {
     }
 
     void startLoading(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity,android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
         LayoutInflater inflater = mActivity.getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.loading_anim, null));
         builder.setCancelable(true);
+
 
 
         mDialog = builder.create();

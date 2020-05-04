@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -117,12 +118,12 @@ public class ChatListAdaptor extends BaseAdapter {
     private  void setChatRowApperance(boolean isIMe,ViewHolder holder){
          if(isIMe){
              holder.params.gravity = Gravity.END;
-             holder.authorName.setTextColor(Color.BLUE);
-             holder.body.setBackgroundResource(R.drawable.bubble1);
+             holder.authorName.setTextColor(Color.BLACK);
+             holder.body.setBackgroundResource(R.drawable.circle_bubble);
          }else{
              holder.params.gravity = Gravity.START;
-             holder.authorName.setTextColor(Color.BLUE);
-             holder.body.setBackgroundResource(R.drawable.bubble2);
+             holder.authorName.setTextColor(Color.BLACK);
+             holder.body.setBackgroundResource(R.drawable.circle_bubble);
          }
          holder.authorName.setLayoutParams(holder.params);
          holder.body.setLayoutParams(holder.params);
