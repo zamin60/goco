@@ -1,6 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="false"
@@ -8,114 +9,128 @@
     android:layout_centerVertical="false"
     android:background="@drawable/login1"
     android:gravity="bottom"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="10dp"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="130dp"
     tools:context="com.zash.goco.LoginActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="191dp"
-        android:layout_height="200dp"
-        android:layout_marginHorizontal="100dp"
+        android:id="@+id/loadding"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="9dp"
         android:visibility="visible"
-        app:lottie_loop="true"
-        app:lottie_speed="1.2"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/input_layout"
+        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_fileName="login-animation.json"
-        android:id="@+id/loadding"
-        android:layout_marginBottom="10dp"
-        />
+        app:lottie_loop="true"
+        app:lottie_speed="1.2" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_layout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
         android:background="@drawable/round_btn"
+        
         android:textColorHint="@color/black"
-        android:hint="Email"
         app:hintAnimationEnabled="true"
-        >
+        app:layout_constraintBottom_toTopOf="@+id/input1_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/input1_layout"
+        app:layout_constraintTop_toBottomOf="@+id/loadding">
 
         <AutoCompleteTextView
             android:id="@+id/login_email"
-            android:drawableLeft="@drawable/user"
-            android:paddingLeft="8dp"
-            android:paddingBottom="8dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:drawableLeft="@drawable/user"
             android:gravity="center_vertical"
             android:hint="Email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
             android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:textIsSelectable="false"
-            android:background="@null"
-            />
+            android:textIsSelectable="false" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="180dp"
         android:id="@+id/input1_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
 
 
-
-        android:background="@drawable/round_btn">
+        android:background="@drawable/round_btn"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/login_sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/login_sign_in_button"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout">
 
         <EditText
-            android:autofillHints="\@gmail.com"
-            android:drawableLeft="@drawable/pass"
-            android:paddingLeft="8dp"
-            android:paddingBottom="8dp"
+
             android:id="@+id/login_password"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints="\@gmail.com"
+            android:background="@null"
+            android:drawableLeft="@drawable/pass"
             android:hint="@string/prompt_password"
             android:imeActionId="@integer/login"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
             android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
             android:textColor="@color/black"
-            android:background="@null"
             android:textColorHint="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:layout_width="match_parent"
         android:id="@+id/login_sign_in_button"
         style="?android:textAppearanceMedium"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/green"
         android:onClick="signInExistingUser"
         android:text="@string/action_sign_in_short"
         android:textColor="@color/white"
-        android:textStyle="bold"
 
-        />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login_register_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/login_register_button"
+        app:layout_constraintTop_toBottomOf="@+id/input1_layout" />
 
     <Button
 
         android:id="@+id/login_register_button"
         style="?android:textAppearanceMedium"
-        android:layout_width="391dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="180dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
         android:background="@color/white"
         android:onClick="registerNewUser"
         android:text="@string/action_register"
         android:textColor="@color/green"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_in_button" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

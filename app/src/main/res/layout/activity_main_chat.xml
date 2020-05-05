@@ -9,6 +9,8 @@
                 android:background="@drawable/login1"
                 tools:context="com.zash.goco.MainChatActivity">
 
+
+
     <ListView
         android:id="@+id/chat_list_view"
         android:layout_width="fill_parent"
